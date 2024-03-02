@@ -36,7 +36,7 @@ public class List {
             this.first = newNode;
         }
         else{
-            Node newNode = new Node(nCharData, first.next);
+            Node newNode = new Node(nCharData, this.first.next);
             this.first = newNode;
         }
         this.size ++;
