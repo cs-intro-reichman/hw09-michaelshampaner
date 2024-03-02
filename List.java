@@ -30,15 +30,8 @@ public class List {
     /** GIVE Adds a CharData object with the given character to the beginning of this list. */
     public void addFirst(char chr) {
         CharData nCharData = new CharData(chr);
-        // if the list is empty, newCharData is first node
-        if (this.first == null) {
-            Node newNode = new Node(nCharData);
-            this.first = newNode;
-        }
-        else{
-            Node newNode = new Node(nCharData, this.first.next);
-            this.first = newNode;
-        }
+        Node newNode = new Node(nCharData, this.first);
+        this.first = newNode;
         this.size ++;
         }
     
