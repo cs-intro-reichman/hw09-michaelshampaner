@@ -30,9 +30,9 @@ public class List {
     /** GIVE Adds a CharData object with the given character to the beginning of this list. */
     public void addFirst(char chr) {
         CharData nCharData = new CharData(chr);
-        Node newNode = new Node(nCharData, this.first);
+        Node newNode = new Node(nCharData, first);
         this.first = newNode;
-        this.size ++;
+        size ++;
         }
     
     /** GIVE Textual representation of this list. */
