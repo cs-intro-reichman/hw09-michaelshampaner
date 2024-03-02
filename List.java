@@ -32,15 +32,15 @@ public class List {
         CharData nCharData = new CharData(chr);
         Node newNode = new Node(nCharData);
         // if the list is empty, node is first node
-        if (first == null) {
-            first = newNode;
+        if (this.first == null) {
+            this.first = newNode;
         }
         else{
-            Node newSecond = first;
-            first = newNode;
-            first.next = newSecond;
+            Node newSecond = this.first;
+            this.first = newNode;
+            this.first.next = newSecond;
         }
-        size ++;
+        this.size ++;
         }
     
     /** GIVE Textual representation of this list. */
@@ -48,7 +48,8 @@ public class List {
         String s = "";
         Node current = first;
         while (current != null) {
-            s += current.cp.toString();
+            s += current.cp.toString() + " ";
+            current = current.next;
         }
         return s;
     }
