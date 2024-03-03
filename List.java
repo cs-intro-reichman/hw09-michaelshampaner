@@ -81,6 +81,10 @@ public class List {
      *  in this list, removes this CharData object from the list and returns
      *  true. Otherwise, returns false. */
     public boolean remove(char chr) {
+        // if the chr is not in list
+        if (indexOf(chr) == -1){
+            return false;
+        }
         // if the given char is the first
         if (first.cp.equals(chr)) {
             first = first.next;
@@ -88,7 +92,7 @@ public class List {
             return true;
         }
         Node current = first;
-        while (current != null) {
+        while (current.next != null) {
             if (current.next.cp.equals(chr)) {
                 current.next = current.next.next;
                 size --;
