@@ -83,13 +83,7 @@ public class List {
     public boolean remove(char chr) {
         // if the given char is the first
         if (first.cp.equals(chr)) {
-            // if the list size is 1
-            if (size == 1) {
-                first = null;
-            }
-            else{
-                first = first.next;
-            }
+            first = first.next;
             size --;
             return true;
         }
