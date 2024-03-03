@@ -71,8 +71,9 @@ public class List {
         while (current != null) {
             if (current.cp.equals(chr)) {
                 current.cp.count ++;
+                return;
             }
-            return;
+            current = current.next;
         }
         addFirst(chr);
     }
