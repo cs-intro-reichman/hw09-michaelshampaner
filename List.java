@@ -40,7 +40,7 @@ public class List {
         String s = "";
         Node current = first;
         while (current != null) {
-            s += current.cp.toString() + " ";
+            s += current.toString() + " ";
             current = current.next;
         }
         return s;
