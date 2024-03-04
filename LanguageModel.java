@@ -49,9 +49,8 @@ public class LanguageModel {
             CharData temp = probs.get(i);
             temp.p = (double)temp.count / totalCount;
             temp.cp = prevCP + temp.p;
-            prevCP = temp.cp;
+            prevCP += temp.cp;
         }
-		return;
             
 	}
 
