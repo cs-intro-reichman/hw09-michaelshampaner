@@ -118,9 +118,9 @@ public class LanguageModel {
         while (result.length() - initialText.length() < textLength){
 
             // get the list of the window
-            List l = CharDataMap.get(window);
+            List list = CharDataMap.get(window);
             // get the new char
-            char c = getRandomChar(l);
+            char c = getRandomChar(list);
             // add the new char
             result += c;
             // set new window
