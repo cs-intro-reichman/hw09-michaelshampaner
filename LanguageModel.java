@@ -56,13 +56,13 @@ public class LanguageModel {
 	public char getRandomChar(List probs) {
 		double r = randomGenerator.nextDouble();
         for (int i = 0; i < probs.getSize(); i++) {
-            CharData c = probs.get(i);
-            if (c.cp > r){
-                return c.chr;
+            CharData temp = probs.get(i);
+            if (temp.cp > r){
+                return temp.chr;
             }
         }
 
-        return '^';
+        return ' ';
 	}
 
     /**
