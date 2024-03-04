@@ -49,6 +49,7 @@ public class LanguageModel {
             if (probs == null){
                 CharDataMap.put(window, new List());
             }
+            probs = CharDataMap.get(window);
             // Calculates the counts of the current character.
             probs.update(c);
             // Advances the window: adds c to the window’s end, and deletes the
