@@ -44,7 +44,7 @@ public class LanguageModel {
             CharData temp = probs.get(i);
             totalCount += temp.count;
         }
-        double prevCP = 0.0;
+        double prevCP = 0;
         for (int i = 0; i < probs.getSize(); i++) {
             CharData temp = probs.get(i);
             temp.p = (double)temp.count / totalCount;
