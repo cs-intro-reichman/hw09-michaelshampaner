@@ -51,6 +51,7 @@ public class LanguageModel {
             temp.cp = prevCP + temp.p;
             prevCP = temp.cp;
         }
+		return;
             
 	}
 
